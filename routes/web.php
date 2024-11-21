@@ -3,8 +3,10 @@
 
 use App\Http\Controllers\TelegramController;
 
-Route::get('/send-message', function () {
+
+Route::get('/send-message', function(){
     return view('send-message');
 });
 
-Route::post('/send-message', [TelegramController::class, 'sendMessage']);
+Route::post('/send-message',[TelegramController::class,'sendMessage']);
+
