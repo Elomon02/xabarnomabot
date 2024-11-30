@@ -7,10 +7,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Xabarnoma Tizimi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><b>Bosh sahifa</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/send-message">Xabar Yuborish</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 <div class="container mt-5">
-    <h1>Telegram Bot Orqali Xabar Yuborish</h1>
+    <h1>Telegram Bot ga xabar yuborish</h1>
 
-    <!-- Muvaffaqiyat yoki xatolik haqida bildirishnomalar -->
     @if (session('success'))
         <div id="success-alert" class="alert alert-success">
             {{ session('success') }}
@@ -23,7 +38,7 @@
         </div>
     @endif
 
-    <!-- Xabar Formasi -->
+    
     <form action="/send-message" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
@@ -42,9 +57,9 @@
     </form>
 </div>
 
-<!-- JavaScript qo'shish -->
+
 <script>
-    // 3 sekunddan keyin muvaffaqiyat yoki xatolik xabarini yashirish
+
     setTimeout(function() {
         let successAlert = document.getElementById('success-alert');
         let errorAlert = document.getElementById('error-alert');
@@ -54,7 +69,7 @@
         if (errorAlert) {
             errorAlert.style.display = 'none';
         }
-    }, 3000); // 3000 millisekund (3 soniya)
+    }, 3000);
 </script>
 
 </body>
