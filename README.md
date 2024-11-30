@@ -20,3 +20,4 @@ proektni ishga tushurish uchun ohiri bu kommanda yoziladi
 ```bash
    php artisan serve
 ```
+
